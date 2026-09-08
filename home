@@ -394,14 +394,7 @@
     background-color: var(--caramel-accent);
   }
 
-/* Googleサイトの埋め込み枠に合わせる設定 */
-html, body {
-  height: auto !important;
-  overflow-x: hidden !important;
-  overflow-y: visible !important;
-}
-
-  /* レスポンシブ (スマホ表示最適化) */
+  /* レスポンシブ (PC・スマホ表示最適化) */
   @media (max-width: 900px) {
     .concept-row, .concept-row:nth-child(even) { flex-direction: column; }
     .concept-img, .concept-body { width: 100%; }
@@ -426,27 +419,25 @@ html, body {
     .concept-body { padding: 20px 15px; }
   }
 
-/* Beholdウィジェットのレスポンシブ対応 */
-behold-widget {
-  display: block;
-  width: 100%;
-}
-
-/* スマホ表示（画面幅650px以下）のとき */
-@media (max-width: 650px) {
+  /* Beholdウィジェットのレスポンシブ（スマホ2列完全強制化） */
   behold-widget {
-    /* グリッド表示の場合：2列に強制変更 */
-    grid-template-columns: repeat(2, 1fr) !important;
-    gap: 8px !important;
+    display: block;
+    width: 100%;
   }
 
-/* 枠内の個々の画像要素の幅を100%に引き伸ばす */
-  behold-widget > * {
-    width: 100% !important;
-    max-width: 100% !important;
-  }
-}
+  @media (max-width: 650px) {
+    behold-widget,
+    behold-widget::part(container) {
+      display: grid !important;
+      grid-template-columns: repeat(2, 1fr) !important;
+      gap: 8px !important;
+    }
 
+    behold-widget > * {
+      width: 100% !important;
+      max-width: 100% !important;
+    }
+  }
 </style>
 </head>
 
