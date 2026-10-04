@@ -415,6 +415,10 @@ header nav a.btn-link:hover {
     width: 100%;
   }
 
+.menu-desc span {
+  display: inline-block; /* 単語の途中で途切れず、スラッシュ単位で改行させる */
+}
+
   /* --- 固定ボタン類 --- */
   .back-home-btn {
     position: fixed;
@@ -528,10 +532,31 @@ header nav a.btn-link:hover {
       justify-content: flex-start;
     }
 
-    .menu-grid { 
-      grid-template-columns: 1fr; 
-      gap: 16px; 
-    }
+/* スマホ表示で2列に並べる */
+  .menu-grid { 
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 10px; 
+  }
+
+  /* 2列にした際に余白や文字サイズを自動で微調整 */
+  .menu-body {
+    padding: 10px;
+  }
+
+  .menu-name {
+    font-size: 0.88rem;
+  }
+
+  .menu-desc {
+    font-size: 0.75rem;
+    margin-bottom: 8px;
+  }
+
+.menu-price {
+  font-size: 0.75rem; /* サイズを少し小さく */
+  white-space: nowrap; /* 途中で改行させない */
+  letter-spacing: -0.5px; /* 必要に応じて文字間隔をわずかに詰める */
+}
 
     .back-home-btn {
       bottom: 65px;
@@ -614,7 +639,7 @@ header nav a.btn-link:hover {
           
           <div class="menu-card" data-store="all">
             <div class="menu-img">
-              <img src="https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&w=600&q=80" alt="三日月プレミアムブレンド">
+              <img src="https://drive.google.com/thumbnail?id=1CIs4fa5o43pJcJXKUy348z6yKz1GkVQI&sz=w1000" alt="三日月プレミアムブレンド">
             </div>
             <div class="menu-body">
               <div>
@@ -626,7 +651,7 @@ header nav a.btn-link:hover {
 
           <div class="menu-card" data-store="all">
             <div class="menu-img">
-              <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=600&q=80" alt="アメリカン">
+              <img src="https://drive.google.com/thumbnail?id=1BTgld1TaPWoUy-29eHr-p2xYAIbggf7Q&sz=w1000" alt="アメリカン">
             </div>
             <div class="menu-body">
               <div>
@@ -638,7 +663,7 @@ header nav a.btn-link:hover {
 
           <div class="menu-card" data-store="all">
             <div class="menu-img">
-              <img src="https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&fit=crop&w=600&q=80" alt="アイスコーヒー">
+              <img src="https://drive.google.com/thumbnail?id=1KBxPz7MeofG2TuXWrnf3PkZQzLlky9qj&sz=w1000" alt="アイスコーヒー">
             </div>
             <div class="menu-body">
               <div>
@@ -650,7 +675,7 @@ header nav a.btn-link:hover {
 
           <div class="menu-card" data-store="all">
             <div class="menu-img">
-              <img src="https://images.unsplash.com/photo-1572490122747-3968b75cc699?auto=format&fit=crop&w=600&q=80" alt="コーヒーフロート">
+              <img src="https://drive.google.com/thumbnail?id=1TpbfVDQuU47ag1Fw3X-qMIMidTwRDves&sz=w1000" alt="コーヒーフロート">
             </div>
             <div class="menu-body">
               <div>
@@ -662,7 +687,7 @@ header nav a.btn-link:hover {
 
           <div class="menu-card" data-store="all">
             <div class="menu-img">
-              <img src="https://images.unsplash.com/photo-1534778101976-62847782c213?auto=format&fit=crop&w=600&q=80" alt="カフェオレ">
+              <img src="https://drive.google.com/thumbnail?id=1IlAdNTHyqAPCfPaC-hmpAEjEyn5SbYPT&sz=w1000" alt="カフェオレ">
             </div>
             <div class="menu-body">
               <div>
@@ -674,7 +699,7 @@ header nav a.btn-link:hover {
 
           <div class="menu-card" data-store="all">
             <div class="menu-img">
-              <img src="https://images.unsplash.com/photo-1579888926999-2917300133c2?auto=format&fit=crop&w=600&q=80" alt="ウィンナー">
+              <img src="https://drive.google.com/thumbnail?id=1ddJIZPI-G_NgUWTdxz16K009tOT5e0fL&sz=w1000" alt="ウィンナー">
             </div>
             <div class="menu-body">
               <div>
@@ -686,7 +711,7 @@ header nav a.btn-link:hover {
 
           <div class="menu-card" data-store="all">
             <div class="menu-img">
-              <img src="https://images.unsplash.com/photo-1579888926999-2917300133c2?auto=format&fit=crop&w=600&q=80" alt="カフェオレウィンナー">
+              <img src="https://drive.google.com/thumbnail?id=1DFfzpMmJVqhXMvyPtP56a68VY1T6G59W&sz=w1000" alt="カフェオレウィンナー">
             </div>
             <div class="menu-body">
               <div>
@@ -706,7 +731,7 @@ header nav a.btn-link:hover {
 
           <div class="menu-card" data-store="all">
             <div class="menu-img">
-              <img src="https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&w=600&q=80" alt="紅茶">
+              <img src="https://drive.google.com/thumbnail?id=1VVMD9qOU-mj68dy0CS0TkHeov-Ldk0Zg&sz=w1000" alt="紅茶">
             </div>
             <div class="menu-body">
               <div>
@@ -720,7 +745,7 @@ header nav a.btn-link:hover {
 
           <div class="menu-card" data-store="all">
             <div class="menu-img">
-              <img src="https://images.unsplash.com/photo-1597481499750-3e6b22637e12?auto=format&fit=crop&w=600&q=80" alt="ルイボスティー">
+              <img src="https://drive.google.com/thumbnail?id=14VovJxIFVAsrYOWY0UJ63FMs26wDT_oz&sz=w1000" alt="ルイボスティー">
             </div>
             <div class="menu-body">
               <div>
@@ -732,7 +757,7 @@ header nav a.btn-link:hover {
 
           <div class="menu-card" data-store="all">
             <div class="menu-img">
-              <img src="https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80" alt="カモミール">
+              <img src="https://drive.google.com/thumbnail?id=1GFOoLCM9S1DLcj16sTWZpiLI1dbvMU9s&sz=w1000" alt="カモミール">
             </div>
             <div class="menu-body">
               <div>
@@ -745,7 +770,7 @@ header nav a.btn-link:hover {
 
           <div class="menu-card" data-store="all">
             <div class="menu-img">
-              <img src="https://images.unsplash.com/photo-1558160074-4d7d8bdf4256?auto=format&fit=crop&w=600&q=80" alt="ローズヒップティー">
+              <img src="https://drive.google.com/thumbnail?id=1K_sz00lTGkRR95mZfs6TBDzfcQ_52deH&sz=w1000" alt="ローズヒップティー">
             </div>
             <div class="menu-body">
               <div>
@@ -757,7 +782,7 @@ header nav a.btn-link:hover {
 
           <div class="menu-card" data-store="all">
             <div class="menu-img">
-              <img src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=600&q=80" alt="ゆずティー">
+              <img src="https://drive.google.com/thumbnail?id=11qdLo8C7aIIwIgJpefuljzMrXVE-v78Z&sz=w1000" alt="ゆずティー">
             </div>
             <div class="menu-body">
               <div>
@@ -777,7 +802,7 @@ header nav a.btn-link:hover {
 
           <div class="menu-card" data-store="all">
             <div class="menu-img">
-              <img src="https://images.unsplash.com/photo-1534778101976-62847782c213?auto=format&fit=crop&w=600&q=80" alt="カフェラテ">
+              <img src="https://drive.google.com/thumbnail?id=1k790ViAIjAuDnp7fNFqULmvYpJq9Pz-v&sz=w1000" alt="カフェラテ">
             </div>
             <div class="menu-body">
               <div>
@@ -789,7 +814,7 @@ header nav a.btn-link:hover {
 
           <div class="menu-card" data-store="all">
             <div class="menu-img">
-              <img src="https://images.unsplash.com/photo-1599390719602-555e71887e02?auto=format&fit=crop&w=600&q=80" alt="キャラメルラテ">
+              <img src="https://drive.google.com/thumbnail?id=1eFbhgBayoS6IXWjDQhE6JqHap_TUpTzt&sz=w1000" alt="キャラメルラテ">
             </div>
             <div class="menu-body">
               <div>
@@ -801,7 +826,7 @@ header nav a.btn-link:hover {
 
           <div class="menu-card" data-store="all">
             <div class="menu-img">
-              <img src="https://images.unsplash.com/photo-1570968915860-54d5c301fa9f?auto=format&fit=crop&w=600&q=80" alt="バニララテ">
+              <img src="https://drive.google.com/thumbnail?id=1sD8Y-MXTaJSfMU6boINw5aQz0IHkYsY4&sz=w1000" alt="バニララテ">
             </div>
             <div class="menu-body">
               <div>
@@ -813,7 +838,7 @@ header nav a.btn-link:hover {
 
           <div class="menu-card" data-store="all">
             <div class="menu-img">
-              <img src="https://images.unsplash.com/photo-1485808191679-5f86510681a2?auto=format&fit=crop&w=600&q=80" alt="キャラメルマキアート">
+              <img src="https://drive.google.com/thumbnail?id=1Jd0pM5zCJrq5Yyr5YIZDuKYNEzwqDthf&sz=w1000" alt="キャラメルマキアート">
             </div>
             <div class="menu-body">
               <div>
@@ -833,7 +858,7 @@ header nav a.btn-link:hover {
 
           <div class="menu-card" data-store="all">
             <div class="menu-img">
-              <img src="https://images.unsplash.com/photo-1542990253-0d0f5be5f0ed?auto=format&fit=crop&w=600&q=80" alt="生クリームココア">
+              <img src="https://drive.google.com/thumbnail?id=1c4Rm3zEAt4pO5xyXLIWMTHAl5x3XLv6e&sz=w1000" alt="生クリームココア">
             </div>
             <div class="menu-body">
               <div>
@@ -845,7 +870,7 @@ header nav a.btn-link:hover {
 
           <div class="menu-card" data-store="all">
             <div class="menu-img">
-              <img src="https://images.unsplash.com/photo-1550583724-b2692b85b150?auto=format&fit=crop&w=600&q=80" alt="ミルク">
+              <img src="https://drive.google.com/thumbnail?id=1ma0md_m-JcBp5cU1m_m3tJU5Td2hnPj4&sz=w1000" alt="ミルク">
             </div>
             <div class="menu-body">
               <div>
@@ -857,7 +882,7 @@ header nav a.btn-link:hover {
 
           <div class="menu-card" data-store="all">
             <div class="menu-img">
-              <img src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=600&q=80" alt="レモネード">
+              <img src="https://drive.google.com/thumbnail?id=1hzCt3JF05mMhb7l0iaElcjMAQ35jgHTZ&sz=w1000" alt="レモネード">
             </div>
             <div class="menu-body">
               <div>
@@ -877,7 +902,7 @@ header nav a.btn-link:hover {
 
           <div class="menu-card" data-store="all">
             <div class="menu-img">
-              <img src="https://images.unsplash.com/photo-1613478223719-2ab802602423?auto=format&fit=crop&w=600&q=80" alt="ミックスジュース">
+              <img src="https://drive.google.com/thumbnail?id=1p_NRlnwMxaziUGJpN1Z96HPpkzORDIQ9&sz=w1000" alt="ミックスジュース">
             </div>
             <div class="menu-body">
               <div>
@@ -889,7 +914,7 @@ header nav a.btn-link:hover {
 
           <div class="menu-card" data-store="all">
             <div class="menu-img">
-              <img src="https://images.unsplash.com/photo-1553530666-ba11a7da3888?auto=format&fit=crop&w=600&q=80" alt="バナナジュース">
+              <img src="https://drive.google.com/thumbnail?id=1yS1EDeRY0ZbvH8Z44NIAVVGyr615MwAz&sz=w1000" alt="バナナジュース">
             </div>
             <div class="menu-body">
               <div>
@@ -901,7 +926,7 @@ header nav a.btn-link:hover {
 
           <div class="menu-card" data-store="all">
             <div class="menu-img">
-              <img src="https://images.unsplash.com/photo-1560806887-1e4cd0b6cbd6?auto=format&fit=crop&w=600&q=80" alt="100%りんごジュース">
+              <img src="https://drive.google.com/thumbnail?id=1QKMAQgfV91C4Dei_jvB58SG3F1oDgHgG&sz=w1000" alt="100%りんごジュース">
             </div>
             <div class="menu-body">
               <div>
@@ -913,7 +938,7 @@ header nav a.btn-link:hover {
 
           <div class="menu-card" data-store="all">
             <div class="menu-img">
-              <img src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=600&q=80" alt="ゆずソーダ">
+              <img src="https://drive.google.com/thumbnail?id=1XJD2tYg0m8BIlwSITovQgbY8RNcuLH56&sz=w1000" alt="ゆずソーダ">
             </div>
             <div class="menu-body">
               <div>
@@ -925,7 +950,7 @@ header nav a.btn-link:hover {
 
           <div class="menu-card" data-store="all">
             <div class="menu-img">
-              <img src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=600&q=80" alt="レモンソーダ">
+              <img src="https://drive.google.com/thumbnail?id=1-YBQttgOHNgk2o6eKPjwbjZ2rGqpm2lc&sz=w1000" alt="レモンソーダ">
             </div>
             <div class="menu-body">
               <div>
@@ -937,7 +962,7 @@ header nav a.btn-link:hover {
 
           <div class="menu-card" data-store="all">
             <div class="menu-img">
-              <img src="https://images.unsplash.com/photo-1556881286-fc6915169721?auto=format&fit=crop&w=600&q=80" alt="メロンソーダ">
+              <img src="https://drive.google.com/thumbnail?id=1PnxzvnqKejZlHdkS3B4y3qgq4xBleXFN&sz=w1000" alt="メロンソーダ">
             </div>
             <div class="menu-body">
               <div>
@@ -961,7 +986,7 @@ header nav a.btn-link:hover {
 
           <div class="menu-card" data-store="all">
             <div class="menu-img">
-              <img src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=600&q=80" alt="コーヒーゼリー">
+              <img src="https://drive.google.com/thumbnail?id=1jFWj5RnEZnyoOjSF4wmHMVsNC5jQS3aW&sz=w1000" alt="コーヒーゼリー">
             </div>
             <div class="menu-body">
               <div>
@@ -1011,7 +1036,7 @@ header nav a.btn-link:hover {
             </div>
           </div>
 
-          <div class="menu-card" data-store="all">
+          <div class="menu-card" data-store="iyo">
             <div class="menu-img">
               <img src="https://drive.google.com/thumbnail?id=12YODQ5I4VWB35g2_n9vVFRbr9fqaSMtW&sz=w1000" alt="あんこトースト">
             </div>
@@ -1019,6 +1044,19 @@ header nav a.btn-link:hover {
               <div>
                 <h4 class="menu-name">あんこトースト</h4>
                 <p class="menu-desc">【石田製餡コラボ】トースト用にこだわって作った甘さ控えめな人気餡です。</p>
+              </div>
+              <div class="menu-price">ドリンク代 ＋ ¥ 390 <small style="font-size:0.75rem;">(税込)</small></div>
+            </div>
+          </div>
+
+          <div class="menu-card" data-store="airport">
+            <div class="menu-img">
+              <img src="https://drive.google.com/thumbnail?id=1ZeGPgRLUuSrkUdl2zroq4tgGw0G5JZY-&sz=w1000" alt="フレンチ">
+            </div>
+            <div class="menu-body">
+              <div>
+                <h4 class="menu-name">フレンチトースト</h4>
+                <p class="menu-desc">ラウンドパンにメープルシロップをかけて焼き上げた当店自慢のフレンチトーストです。</p>
               </div>
               <div class="menu-price">ドリンク代 ＋ ¥ 390 <small style="font-size:0.75rem;">(税込)</small></div>
             </div>
@@ -1150,7 +1188,7 @@ header nav a.btn-link:hover {
           <!-- 季節のスープ -->
           <div class="menu-card" data-store="all">
             <div class="menu-img">
-              <img src="https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=600&q=80" alt="季節のスープ">
+              <img src="https://drive.google.com/thumbnail?id=17mothwMNxOYVNHlbwP6l_ER44VU07qDX&sz=w1000" alt="季節のスープ">
             </div>
             <div class="menu-body">
               <div>
@@ -1166,7 +1204,7 @@ header nav a.btn-link:hover {
 
           <div class="menu-card" data-store="all">
             <div class="menu-img">
-              <img src="https://images.unsplash.com/photo-1518569656558-1f25e69d93d7?auto=format&fit=crop&w=600&q=80" alt="ゆで卵">
+              <img src="https://drive.google.com/thumbnail?id=1ezyMxgyRVW_ch5zPyaUKt4L5YFQUZNzB&sz=w1000" alt="ゆで卵">
             </div>
             <div class="menu-body">
               <div>
@@ -1179,7 +1217,7 @@ header nav a.btn-link:hover {
 
           <div class="menu-card" data-store="all">
             <div class="menu-img">
-              <img src="https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=600&q=80" alt="ヨーグルト">
+              <img src="https://drive.google.com/thumbnail?id=1iEdrO9R2vGTzGsd-lwdRJmUB27wTDAFV&sz=w1000" alt="ヨーグルト">
             </div>
             <div class="menu-body">
               <div>
@@ -1192,7 +1230,7 @@ header nav a.btn-link:hover {
 
           <div class="menu-card" data-store="all">
             <div class="menu-img">
-              <img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?auto=format&fit=crop&w=600&q=80" alt="ジェラート">
+              <img src="https://drive.google.com/thumbnail?id=1U3n3j6QgFh158-reZ6wtL6QR5_Insta3&sz=w1000" alt="ジェラート">
             </div>
             <div class="menu-body">
               <div>
@@ -1205,7 +1243,7 @@ header nav a.btn-link:hover {
 
           <div class="menu-card" data-store="all">
             <div class="menu-img">
-              <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=600&q=80" alt="おかわりコーヒー・紅茶">
+              <img src="https://drive.google.com/thumbnail?id=1hmL-pxODvaRVBTE7BqVo3o7ywW4eTbgl&sz=w1000" alt="おかわりコーヒー・紅茶">
             </div>
             <div class="menu-body">
               <div>
@@ -1233,37 +1271,38 @@ header nav a.btn-link:hover {
   
   <div class="menu-grid">
 
-   <!-- 1. 【期間限定】冷製タラコパスタ -->
-    <div class="menu-card" data-store="all">
+
+    <!-- 1. ハッシュドビーフ -->
+    <div class="menu-card" data-store="iyo">
       <div class="menu-img">
-        <img src="https://drive.google.com/thumbnail?id=1ubezHGAf47BblKSuUTPNEQD28howK3Gc&sz=w1000" alt="冷製タラコパスタ">
+        <img src="https://drive.google.com/thumbnail?id=1qyqPrlhVqlm2uDEFRxJY4wBvS_qWYt7n&sz=w1000" alt="ハッシュドビーフ">
       </div>
       <div class="menu-body">
         <div>
-          <h4 class="menu-name">冷製タラコパスタ</h4>
+          <h4 class="menu-name">ハッシュドビーフ</h4>
           <div class="menu-tags">
             <span class="tag tag-limited">期間限定</span>
           </div>
-          <p class="menu-desc">本店創業当時のメニュー、リピートの声でリニューアルし期間限定で復活しました。</p>
+          <p class="menu-desc">デミグラスハンバーグと同様オリジナルソースのこだわりソースで期間限定のお届けです。</p>
         </div>
-        <div class="menu-price">¥ 980 <small style="font-size:0.75rem;">(税込)</small></div>
+        <div class="menu-price">¥ 1,300 <small style="font-size:0.75rem;">(税込)</small></div>
       </div>
     </div>
 
-    <!-- 1. 【期間限定】山椒チキン -->
+    <!-- 1. デミグラスハンバーグ -->
     <div class="menu-card" data-store="iyo">
       <div class="menu-img">
-        <img src="https://drive.google.com/thumbnail?id=1FybptejvKYDEmnG3ktWKpLhtFsOci0mB&sz=w1000" alt="山椒チキン">
+        <img src="https://drive.google.com/thumbnail?id=1jjUEQKY14P5SyF07AYsUyKad3yWumGWK&sz=w1000" alt="デミグラスハンバーグ">
       </div>
       <div class="menu-body">
         <div>
-          <h4 class="menu-name">山椒チキン</h4>
+          <h4 class="menu-name">デミグラスハンバーグ</h4>
           <div class="menu-tags">
             <span class="tag tag-limited">期間限定</span>
           </div>
-          <p class="menu-desc">和のスパイス、2種類の山椒と岩塩をブレンドしたこだわりの一品。</p>
+          <p class="menu-desc">愛媛県産久万高原の醤油と赤ワインで深みのあるソースに仕上げました。</p>
         </div>
-        <div class="menu-price">¥ 1,300 <small style="font-size:0.75rem;">(税込)</small></div>
+        <div class="menu-price">¥ 1,400 <small style="font-size:0.75rem;">(税込)</small></div>
       </div>
     </div>
 
@@ -1309,19 +1348,6 @@ header nav a.btn-link:hover {
       </div>
     </div>
 
-    <!-- 3. 【伊予店限定】国産豚の和風ふわとろあんプレート -->
-    <div class="menu-card" data-store="iyo">
-      <div class="menu-img">
-        <img src="https://drive.google.com/thumbnail?id=1zxgLIBVYJcgr6NIwSSZ0ckfW1srmdD2q&sz=w1000" alt="和風ふわとろあんプレート">
-      </div>
-      <div class="menu-body">
-        <div>
-          <h4 class="menu-name">国産豚の和風ふわとろあんプレート</h4>
-          <p class="menu-desc">国産豚ミンチを和風だしとたまごででふんわり焼き上げた定食。仕上げに餡かけでほっこり優しい味わいに。</p>
-        </div>
-        <div class="menu-price">¥ 1,350 <small style="font-size:0.75rem;">(税込)</small></div>
-      </div>
-    </div>
 
     <!-- 3. 【伊予店限定】アジアン風チキン南蛮 -->
     <div class="menu-card" data-store="iyo">
@@ -1371,7 +1397,7 @@ header nav a.btn-link:hover {
     <!-- 2. 【両店共通】生パスタのボロネーゼ -->
     <div class="menu-card" data-store="iyo">
       <div class="menu-img">
-        <img src="https://drive.google.com/thumbnail?id=1ubezHGAf47BblKSuUTPNEQD28howK3Gc&sz=w1000" alt="生パスタのボロネーゼ">
+        <img src="https://drive.google.com/thumbnail?id=1zuysNmlJM_6QbS1rWg0l3n5QUBtleFye&sz=w1000" alt="生パスタのボロネーゼ">
       </div>
       <div class="menu-body">
         <div>
@@ -1396,18 +1422,17 @@ header nav a.btn-link:hover {
       </div>
     </div>
 
-
-    <!-- 3. 【伊予店限定】ボンゴレビアンコ -->
-    <div class="menu-card" data-store="iyo">
+    <!-- 2. エビのパスタ -->
+    <div class="menu-card" data-store="airport">
       <div class="menu-img">
-        <img src="https://drive.google.com/thumbnail?id=1reL91SZbug3yHgCIUx4cI5k3bqWYASf1&sz=w1000" alt="ボンゴレビアンコ">
+        <img src="https://drive.google.com/thumbnail?id=1uc9Ce13kgRqXHSYcAzf9frG8NxPxbKBk&sz=w1000" alt="エビのパスタ">
       </div>
       <div class="menu-body">
         <div>
-          <h4 class="menu-name">ボンゴレビアンコ</h4>
-          <p class="menu-desc">あさりに白ワインとガーリックを効かせた風味豊かなソースと、パスタはもちもちのリングイネ。</p>
+          <h4 class="menu-name">エビのトマトクリーム生パスタ</h4>
+          <p class="menu-desc">コクのある手作りソース。エビの風味が麺と絡みます。</p>
         </div>
-        <div class="menu-price">¥ 1,080 <small style="font-size:0.75rem;">(税込)</small></div>
+        <div class="menu-price">¥ 1,280 <small style="font-size:0.75rem;">(税込)</small></div>
       </div>
     </div>
 
@@ -1423,21 +1448,31 @@ header nav a.btn-link:hover {
           <!-- セットドリンク -->
           <div class="menu-card" data-store="all">
             <div class="menu-img">
-              <img src="https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&fit=crop&w=600&q=80" alt="セットドリンク">
+              <img src="https://drive.google.com/thumbnail?id=1e9Z93_BfHHesZ0O0tKDEWg2oD77H9aiD&sz=w1000" alt="セットドリンク">
             </div>
             <div class="menu-body">
               <div>
                 <h4 class="menu-name">セットドリンク</h4>
-                <p class="menu-desc">ブレンド / アメリカン / アイスコーヒー / カフェオレ(Ice/Hot) / カフェラテ(Ice/Hot) / ストレートティー(Ice/Hot) / レモンティー(Ice/Hot) / ミルクティー(Ice/Hot) / りんごジュース</p>
+<p class="menu-desc">
+  <span>ブレンド /</span>
+  <span>アメリカン /</span>
+  <span>アイスコーヒー /</span>
+  <span>カフェオレ(Ice/Hot) /</span>
+  <span>カフェラテ(Ice/Hot) /</span>
+  <span>ストレートティー(Ice/Hot) /</span>
+  <span>レモンティー(Ice/Hot) /</span>
+  <span>ミルクティー(Ice/Hot) /</span>
+  <span>りんごジュース</span>
+</p>
               </div>
               <div class="menu-price">＋ ¥ 350 <small style="font-size:0.75rem;">(税込)</small></div>
             </div>
           </div>
 
           <!-- サラダ -->
-          <div class="menu-card" data-store="airport">
+          <div class="menu-card" data-store="all">
             <div class="menu-img">
-              <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=600&q=80" alt="サラダ">
+              <img src="https://drive.google.com/thumbnail?id=1m8n9mwqBU4OrwftYvVYhsj_BypS0J_IK&sz=w1000" alt="サラダ">
             </div>
             <div class="menu-body">
               <div>
@@ -1451,7 +1486,21 @@ header nav a.btn-link:hover {
           <!-- おまかせスイーツ -->
           <div class="menu-card" data-store="airport">
             <div class="menu-img">
-              <img src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=600&q=80" alt="おまかせスイーツ">
+              <img src="https://drive.google.com/thumbnail?id=1SUeNp4Z_un4yAPWyac51U5SpxbzZCQRD&sz=w1000" alt="おまかせスイーツ">
+            </div>
+            <div class="menu-body">
+              <div>
+                <h4 class="menu-name">おまかせスイーツ</h4>
+                <p class="menu-desc">日によって変わるオリジナルのプチスイーツです♪</p>
+              </div>
+              <div class="menu-price">＋ ¥ 300 <small style="font-size:0.75rem;">(税込)</small></div>
+            </div>
+          </div>
+
+          <!-- おまかせスイーツ -->
+          <div class="menu-card" data-store="iyo">
+            <div class="menu-img">
+              <img src="https://drive.google.com/thumbnail?id=1GTI6Te-Vvk4VjAweFQXWCF0xoFW-dpx9&sz=w1000" alt="おまかせスイーツ">
             </div>
             <div class="menu-body">
               <div>
@@ -1463,9 +1512,9 @@ header nav a.btn-link:hover {
           </div>
 
           <!-- ジェラート -->
-          <div class="menu-card" data-store="airport">
+          <div class="menu-card" data-store="all">
             <div class="menu-img">
-              <img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?auto=format&fit=crop&w=600&q=80" alt="ジェラート">
+              <img src="https://drive.google.com/thumbnail?id=1U3n3j6QgFh158-reZ6wtL6QR5_Insta3&sz=w1000" alt="ジェラート">
             </div>
             <div class="menu-body">
               <div>
@@ -1615,11 +1664,11 @@ header nav a.btn-link:hover {
           <!-- 季節のパイ -->
           <div class="menu-card" data-store="all">
             <div class="menu-img">
-              <img src="https://drive.google.com/thumbnail?id=1_FB-kNP6nfQQqzf2GBbzpNlFhveIRiz7&sz=w1000" alt="季節のパイ">
+              <img src="https://drive.google.com/thumbnail?id=1GfjdiWQh6eM8XVHoCofneIXQm6KoO5Zg&sz=w1000" alt="季節のパイ">
             </div>
             <div class="menu-body">
               <div>
-                <h4 class="menu-name">季節のパイ</h4>
+                <h4 class="menu-name">季節のパイ：芋パイ</h4>
 <div class="menu-tags">
         <span class="tag tag-limited">テイクアウトOK</span>
       </div>
@@ -1640,7 +1689,7 @@ header nav a.btn-link:hover {
           <!-- チーズケーキ -->
           <div class="menu-card" data-store="all">
             <div class="menu-img">
-              <img src="https://drive.google.com/thumbnail?id=1RheKlERbR8CTkW92dGH7eejwFGjj--Wd&sz=w1000" alt="チーズケーキ">
+              <img src="https://drive.google.com/thumbnail?id=1uDVio0JXbFOFivg0FN9i8hnJDX8WKg96&sz=w1000" alt="チーズケーキ">
             </div>
             <div class="menu-body">
               <div>
@@ -1654,7 +1703,7 @@ header nav a.btn-link:hover {
           <!-- ガトーショコラ -->
           <div class="menu-card" data-store="all">
             <div class="menu-img">
-              <img src="https://drive.google.com/thumbnail?id=1ZR33WqvxDlDlI2pjqskp-9GMDk1Hhv5y&sz=w1000" alt="ガトーショコラ">
+              <img src="https://drive.google.com/thumbnail?id=1-ZYUQ3UaVXYrJI8FGNZ9jDx2Qxws14VS&sz=w1000" alt="ガトーショコラ">
             </div>
             <div class="menu-body">
               <div>
@@ -1670,21 +1719,21 @@ header nav a.btn-link:hover {
 
       <!-- ================= フレンチトースト（新空港通り店限定） ================= -->
       <div class="menu-sub-category" style="margin-top: 40px;">
-        <h3 class="sub-category-title">French Toast <span style="font-size: 0.85em; font-weight: normal; color: #888;">フレンチトースト</span> <small style="font-size:0.75rem; color:#e06d53; font-weight:bold;">[新空港通り店限定]</small></h3>
+        <h3 class="sub-category-title">French Toast <span style="font-size: 0.85em; font-weight: normal; color: #888;">シフォンケーキ</span> <small style="font-size:0.75rem; color:#e06d53; font-weight:bold;">[新空港通り店限定]</small></h3>
         <div class="menu-grid">
 
           <!-- フレンチトースト プレーン -->
           <div class="menu-card" data-store="airport">
             <div class="menu-img">
-              <img src="https://drive.google.com/thumbnail?id=1eS6pBmcPFzswS2VmaUt1RXDpOaYUbIwj&sz=w1000" alt="フレンチトースト プレーン">
+              <img src="https://drive.google.com/thumbnail?id=19pC3TAqlIiJTKH43B8TdBM5tsClexqPL&sz=w1000" alt="フレンチトースト プレーン">
             </div>
             <div class="menu-body">
               <div>
-                <h4 class="menu-name">フレンチトースト プレーン</h4>
-                <p class="menu-desc">シンプルにフレンチトーストがお好みの方はこちら。フレンチトーストのためだけに作られた専用パン。たっぷりのバターとメープルシロップをかけて…</p>
+                <h4 class="menu-name">シフォンケーキ プレーン</h4>
+                <p class="menu-desc">グルテンフリーで焼き上げた当店自慢のシフォンケーキです。</p>
               </div>
         <div class="menu-price menu-price-long">
-  単品 ¥ 700<br><small style="font-size:0.8rem; font-weight:normal;">(ドリンクセット ＋¥ 600 税込)</small>
+  単品 ¥ 500<br><small style="font-size:0.8rem; font-weight:normal;">(ドリンクセット ＋¥ 450 税込)</small>
 </div>
     </div>      
  </div>
@@ -1692,15 +1741,15 @@ header nav a.btn-link:hover {
           <!-- フレンチトースト プレミアムチョコレート -->
           <div class="menu-card" data-store="airport">
             <div class="menu-img">
-              <img src="https://drive.google.com/thumbnail?id=16IDSvm3F5PJjHG0-hfsg_rRC7vfRMHkM&sz=w1000" alt="フレンチトースト プレミアムチョコレート">
+              <img src="https://drive.google.com/thumbnail?id=1OuU60qekGmHDh4ecTctdvhQ6Wtdcp7EY&sz=w1000" alt="フレンチトースト プレミアムチョコレート">
             </div>
             <div class="menu-body">
               <div>
-                <h4 class="menu-name">フレンチトースト プレミアムチョコレート</h4>
-                <p class="menu-desc">甘さを控えた大人の味のチョコレートソース。定番のバナナとの相性抜群！</p>
+                <h4 class="menu-name">シフォンケーキ はちみつレモン</h4>
+                <p class="menu-desc">はちみつレモンを使い、さっぱりとした風味に焼き上げました。</p>
               </div>
  <div class="menu-price menu-price-long">
-  単品 ¥ 800<br><small style="font-size:0.8rem; font-weight:normal;">(ドリンクセット ＋¥ 700 税込)</small>
+  単品 ¥ 600<br><small style="font-size:0.8rem; font-weight:normal;">(ドリンクセット ＋¥ 550 税込)</small>
 </div>
             </div>
           </div>
@@ -1779,57 +1828,6 @@ header nav a.btn-link:hover {
 
     </div>
   </div>
-
-  <!-- ================= 和甘味（伊予店限定） ================= -->
-  <div class="menu-sub-category" style="margin-top: 40px;">
-    <h3 class="sub-category-title">Japanese Sweets <span style="font-size: 0.85em; font-weight: normal; color: #888;">和甘味</span> <small style="font-size:0.75rem; color:#e06d53; font-weight:bold;">[伊予店限定]</small></h3>
-    <div class="menu-grid">
-
-<!-- 白玉珈琲ぜんざい -->
-      <div class="menu-card" data-store="iyo">
-        <div class="menu-img">
-          <img src="https://drive.google.com/thumbnail?id=1eKV7CnYB4X9x6DKttVOpfjHNOwlypf7A&sz=w1000" alt="白玉珈琲ぜんざい">
-        </div>
-        <div class="menu-body">
-          <div>
-            <h4 class="menu-name">白玉珈琲ぜんざい</h4>
-            <p class="menu-desc">和と洋の意外な組み合わせが魅力的な甘味です。</p>
-          </div>
-          <div class="menu-price">¥ 750 <small style="font-size:0.75rem;">(税込)</small></div>
-        </div>
-      </div>
-
-      <!-- 白玉ミルクあんみつ -->
-      <div class="menu-card" data-store="iyo">
-        <div class="menu-img">
-          <img src="https://drive.google.com/thumbnail?id=1jYycX3E1qQZghClKsLByycqst6eG2ZJJ&sz=w1000" alt="白玉ミルクあんみつ">
-        </div>
-        <div class="menu-body">
-          <div>
-            <h4 class="menu-name">白玉ミルクあんみつ</h4>
-            <p class="menu-desc">日本の伝統的な甘味でほっと一息、心安らぐ和のスイーツにミルクジェラートを添えて。</p>
-          </div>
-          <div class="menu-price">¥ 750 <small style="font-size:0.75rem;">(税込)</small></div>
-        </div>
-      </div>
-
-      <!-- 白玉抹茶あんみつ -->
-      <div class="menu-card" data-store="iyo">
-        <div class="menu-img">
-          <img src="https://drive.google.com/thumbnail?id=1V2yfz8Ia3_GAvUBfTq0hHY_a-Du4dAys&sz=w1000" alt="白玉抹茶あんみつ">
-        </div>
-        <div class="menu-body">
-          <div>
-            <h4 class="menu-name">白玉抹茶あんみつ</h4>
-            <p class="menu-desc">日本の伝統的な甘味でほっと一息、心安らぐ和のスイーツに抹茶ジェラートを添えて。</p>
-          </div>
-          <div class="menu-price">¥ 750 <small style="font-size:0.75rem;">(税込)</small></div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-
 
       <!-- ================= パフェ ================= -->
       <div class="menu-sub-category" style="margin-top: 40px;">
