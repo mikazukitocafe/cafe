@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>三日月とカフェ | 松山市・伊予市のカフェ・モーニング・ランチ</title>
 <meta name="description"
-content="愛媛県の三日月とカフェ。松山市の新空港通り店と伊予市の伊予店で、こだわりのコーヒーや手作りのお食事をお楽しみいただけます。">  
+<content="愛媛県の三日月とカフェ。松山市の新空港通り店と伊予市の伊予店で、こだわりのコーヒーや手作りのお食事をお楽しみいただけます。">  
 <link rel="icon" href="favicon.png" type="image/png">  
 <!-- 北欧風・洗練された英字フォントの読み込み -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -187,6 +187,28 @@ content="愛媛県の三日月とカフェ。松山市の新空港通り店と�
   .menu-card h3 { margin: 0 0 6px 0; color: var(--wood-dark); font-size: 1rem; }
   .menu-card p { margin: 0; font-size: 0.8rem; color: #6e6058; line-height: 1.6; }
 
+  /* イベントチラシカード専用スタイル（余白解消版） */
+  .menu-card.event-flyer-card {
+    flex: 0 0 250px; /* 他のカードと同じ横幅 */
+    display: flex;
+    flex-direction: column;
+  }
+  .menu-card.event-flyer-card .card-img {
+    height: 100%; /* カード全体の高さいっぱいに広げる */
+    background: #ffffff;
+    display: flex;
+  }
+  .menu-card.event-flyer-card .card-img a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+  }
+  .menu-card.event-flyer-card .card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* カード全体の枠ぴったりに収める */
+  }
+  
   /* --- PHILOSOPHY --- */
   .philosophy-container { background: #f7f2ea; border-radius: 18px; padding: 40px 20px; border: 1px solid var(--border-color); }
   .vision-title { color: var(--caramel-accent); font-size: 1.2rem; margin-top: 0; text-align: center; }
@@ -522,6 +544,15 @@ content="愛媛県の三日月とカフェ。松山市の新空港通り店と�
 
     <div class="menu-board">
       <div class="menu-grid">
+ <!-- イベントチラシ用カード（文章なし） -->
+        <div class="menu-card event-flyer-card">
+          <div class="card-img">
+            <a href="https://www.instagram.com/mikazukitocafe/" target="_blank" rel="noopener">
+              <img src="https://drive.google.com/thumbnail?id=1upVNd2lahoLh6ogpN4o4kMXh2Y3E13uJ&sz=w1000" alt="開催中のイベント情報">
+            </a>
+          </div>
+        </div>       
+        
         <div class="menu-card">
           <div class="card-img">
             <img src="https://drive.google.com/thumbnail?id=1O5fhwWa980wynZB1yc9LzFGDFMucHaDZ&sz=w1000" alt="手作りハンバーグ">
